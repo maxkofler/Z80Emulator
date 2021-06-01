@@ -27,6 +27,7 @@ public:
 
 private slots:
     void                            sl_bt_asm_pressed();
+    void                            sl_bt_step_pressed();
 
 private:
     Ui::MainWindow*                 _ui;
@@ -44,5 +45,6 @@ private:
     QTextEdit*                      _te_asm;
 
     QPushButton*                    _bt_asm;
+    QPushButton*                    _bt_step;
 };
 #endif // MAINWINDOW_H

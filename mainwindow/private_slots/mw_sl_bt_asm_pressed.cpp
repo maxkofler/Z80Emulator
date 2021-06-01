@@ -23,7 +23,7 @@ void MainWindow::sl_bt_asm_pressed(){
     {
         auto prog = this->_asm->getProg();
         for (auto i : prog){
-            outfile << prog.at(i);
+            outfile << i;
         }
     }
 
