@@ -1,0 +1,6 @@
+[submodule "Z80Emu"]
+	path = Z80Emu
+	url = https://github.com/maxkofler/Z80Emu
+[submodule "Z80Asm"]
+	path = Z80Asm
+	url = https://github.com/maxkofler/Z80Asm
