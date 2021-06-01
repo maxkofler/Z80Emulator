@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-MainWindow::MainWindow(Z80* z80emu, Asm* z80asm, QWidget *parent)
+MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
     : QMainWindow(parent)
     , _ui(new Ui::MainWindow)
 {

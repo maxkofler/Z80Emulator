@@ -20,7 +20,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(Z80*, Asm*, QWidget *parent = nullptr);
+    MainWindow(Z80*, Z80Asm*, QWidget *parent = nullptr);
     ~MainWindow();
 
     void                            refreshCPU();
@@ -31,7 +31,7 @@ private slots:
 private:
     Ui::MainWindow*                 _ui;
     Z80*                            _emu;
-    Asm*                            _asm;
+    Z80Asm*                         _asm;
 
     QLineEdit*                      _le_regA;
     QLineEdit*                      _le_regB;
