@@ -13,10 +13,12 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     hlog = new Log(Log::F, false);
+    hlog->trace.startTrace();       //Trace 0 is the main trace
     Z80 z80emu;
     Z80Asm z80asm;
 
     z80asm.loadLookup("../Z80Asm/z80lookup.txt");
+    z80emu.HALT(true);
     MainWindow w(&z80emu, &z80asm);
     w.show();
     w.refreshCPU();
