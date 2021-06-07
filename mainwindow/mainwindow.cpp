@@ -23,6 +23,8 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
     this->_le_regH = _ui->regH;
     this->_le_regL = _ui->regL;
 
+    this->_le_regPC = _ui->regPC;
+
     this->_te_asm = _ui->codeEdit;
     this->_te_asm->setLineWrapMode(QTextEdit::NoWrap);
     this->_te_asm->setTabStopDistance(40);
@@ -39,6 +41,9 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
 
     this->_emu = z80emu;
     this->_asm = z80asm;
+
+
+    this->connectShortcuts();
 }
 
 MainWindow::~MainWindow()

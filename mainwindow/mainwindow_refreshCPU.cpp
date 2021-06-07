@@ -12,4 +12,6 @@ void MainWindow::refreshCPU(){
     this->_le_regE->setText(QString().fromStdString(Log::toHexString(this->_emu->E())));
     this->_le_regH->setText(QString().fromStdString(Log::toHexString(this->_emu->H())));
     this->_le_regL->setText(QString().fromStdString(Log::toHexString(this->_emu->L())));
+
+    this->_le_regPC->setText(QString().fromStdString(Log::toHexString(this->_emu->PC())));
 }

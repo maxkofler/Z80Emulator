@@ -29,6 +29,8 @@ public:
 
     void                            refreshCPU();
 
+    void                            connectShortcuts();
+
     QMenu*                          newMenu(QString name);
 
 private slots:
@@ -51,6 +53,8 @@ private:
     QLineEdit*                      _le_regE;
     QLineEdit*                      _le_regH;
     QLineEdit*                      _le_regL;
+
+    QLineEdit*                      _le_regPC;
 
     QTextEdit*                      _te_asm;
 

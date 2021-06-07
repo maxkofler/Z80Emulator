@@ -34,6 +34,7 @@ set(PROJECT_SOURCES
             mainwindow/mainwindow.cpp
             mainwindow/mainwindow_refreshCPU.cpp
             mainwindow/mainwindow_newMenu.cpp
+            mainwindow/mainwindow_connectShortcuts.cpp
             #slots
             mainwindow/private_slots/mw_sl_bt_asm_pressed.cpp
             mainwindow/private_slots/mw_sl_bt_step_pressed.cpp
