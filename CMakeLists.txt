@@ -59,7 +59,7 @@ set(PROJECT_SOURCES
 
 include_directories(
     mainwindow/
-    ./
+    Log/include
     )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -84,9 +84,10 @@ include_directories(Z80Emu/include)
 
 add_subdirectory(Z80Asm/libz80asm)
 add_subdirectory(Z80Emu/libz80emu)
+add_subdirectory(Log)
 
-target_link_libraries(Z80Emulator PRIVATE Qt${QT_VERSION_MAJOR}::Widgets libz80emu libz80asm)
-add_dependencies(Z80Emulator libz80emu libz80asm)
+target_link_libraries(Z80Emulator PRIVATE Qt${QT_VERSION_MAJOR}::Widgets libz80emu libz80asm log)
+add_dependencies(Z80Emulator libz80emu libz80asm log)
 
 set_target_properties(Z80Emulator PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
