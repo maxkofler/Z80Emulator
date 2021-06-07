@@ -30,15 +30,37 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 set(PROJECT_SOURCES
         #CPP
         main.cpp
-        mainwindow/mainwindow.cpp
-        mainwindow/mainwindow_refreshCPU.cpp
-        mainwindow/private_slots/mw_sl_bt_asm_pressed.cpp
-        mainwindow/private_slots/mw_sl_bt_step_pressed.cpp
+        #MainWindow
+            mainwindow/mainwindow.cpp
+            mainwindow/mainwindow_refreshCPU.cpp
+            mainwindow/mainwindow_newMenu.cpp
+            #slots
+            mainwindow/private_slots/mw_sl_bt_asm_pressed.cpp
+            mainwindow/private_slots/mw_sl_bt_step_pressed.cpp
+            mainwindow/private_slots/mw_sl_loadSrc.cpp
+            mainwindow/private_slots/mw_sl_saveSrc.cpp
+            mainwindow/private_slots/mw_sl_loadHex.cpp
+
+                #Menu
+                mainwindow/menu/uimenu.cpp
+                mainwindow/menu/uimenu_p_addActions.cpp
+                mainwindow/menu/uimenu_p_connectActions.cpp
+                    #private slots
+                        mainwindow/menu/private_slots/sl_file_openSource_p.cpp
+                        mainwindow/menu/private_slots/sl_file_saveSource_p.cpp
+                        mainwindow/menu/private_slots/sl_file_openHex_p.cpp
+
         #H
         mainwindow/mainwindow.h
+        mainwindow/uimenu.h
         #UI
         mainwindow/mainwindow.ui
 )
+
+include_directories(
+    mainwindow/
+    ./
+    )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Z80Emulator

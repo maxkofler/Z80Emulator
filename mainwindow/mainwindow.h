@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+class MainWindow;
+
 #include <QMainWindow>
 #include <QLineEdit>
 #include <QTextEdit>
@@ -8,6 +10,8 @@
 
 #include "z80emu.h"
 #include "z80asm.h"
+
+#include "uimenu.h"
 
 #include "log.h"
 
@@ -25,9 +29,15 @@ public:
 
     void                            refreshCPU();
 
+    QMenu*                          newMenu(QString name);
+
 private slots:
     void                            sl_bt_asm_pressed();
     void                            sl_bt_step_pressed();
+
+    void                            sl_loadSrc(QString);
+    void                            sl_saveSrc(QString);
+    void                            sl_loadHex(QString);
 
 private:
     Ui::MainWindow*                 _ui;
@@ -46,5 +56,9 @@ private:
 
     QPushButton*                    _bt_asm;
     QPushButton*                    _bt_step;
+
+    //Menu
+    QMenuBar*                       _menuBar;
+    UIMenu*                         _menu;
 };
 #endif // MAINWINDOW_H
