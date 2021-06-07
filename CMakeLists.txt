@@ -35,6 +35,9 @@ set(PROJECT_SOURCES
             mainwindow/mainwindow_refreshCPU.cpp
             mainwindow/mainwindow_newMenu.cpp
             mainwindow/mainwindow_connectShortcuts.cpp
+
+            mainwindow/registers/registers.cpp
+            mainwindow/registers/rgs_refresh.cpp
             #slots
             mainwindow/private_slots/mw_sl_bt_asm_pressed.cpp
             mainwindow/private_slots/mw_sl_bt_step_pressed.cpp
@@ -53,6 +56,7 @@ set(PROJECT_SOURCES
 
         #H
         mainwindow/mainwindow.h
+        mainwindow/registers.h
         mainwindow/uimenu.h
         #UI
         mainwindow/mainwindow.ui

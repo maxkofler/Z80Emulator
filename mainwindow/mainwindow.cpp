@@ -15,15 +15,16 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
     setMenuBar(this->_menuBar);
     this->_menu = new UIMenu(this);
 
-    this->_le_regA = _ui->regA;
-    this->_le_regB = _ui->regB;
-    this->_le_regC = _ui->regC;
-    this->_le_regD = _ui->regD;
-    this->_le_regE = _ui->regE;
-    this->_le_regH = _ui->regH;
-    this->_le_regL = _ui->regL;
+    this->_registers = new Registers(z80emu, z80asm);
 
-    this->_le_regPC = _ui->regPC;
+    this->_registers->_A = _ui->regA;
+    this->_registers->_B = _ui->regB;
+    this->_registers->_C = _ui->regC;
+    this->_registers->_D = _ui->regD;
+    this->_registers->_E = _ui->regE;
+    this->_registers->_H = _ui->regH;
+    this->_registers->_L = _ui->regL;
+    this->_registers->_PC = _ui->regPC;
 
     this->_te_asm = _ui->codeEdit;
     this->_te_asm->setLineWrapMode(QTextEdit::NoWrap);

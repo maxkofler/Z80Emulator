@@ -12,6 +12,7 @@ class MainWindow;
 #include "z80asm.h"
 
 #include "uimenu.h"
+#include "registers.h"
 
 #include "log.h"
 
@@ -33,6 +34,8 @@ public:
 
     QMenu*                          newMenu(QString name);
 
+    Ui::MainWindow*                 get(){return this->_ui;}
+
 private slots:
     void                            sl_bt_asm_pressed();
     void                            sl_bt_step_pressed();
@@ -46,15 +49,8 @@ private:
     Z80*                            _emu;
     Z80Asm*                         _asm;
 
-    QLineEdit*                      _le_regA;
-    QLineEdit*                      _le_regB;
-    QLineEdit*                      _le_regC;
-    QLineEdit*                      _le_regD;
-    QLineEdit*                      _le_regE;
-    QLineEdit*                      _le_regH;
-    QLineEdit*                      _le_regL;
-
-    QLineEdit*                      _le_regPC;
+    //UI fragments
+    Registers*                      _registers;
 
     QTextEdit*                      _te_asm;
 
