@@ -1,6 +1,7 @@
 #include "mainwindow/mainwindow.h"
 
 #include <fstream>
+#include <QMessageBox>
 
 void MainWindow::sl_bt_asm_pressed(){
     FUN();
@@ -15,8 +16,20 @@ void MainWindow::sl_bt_asm_pressed(){
     outfile.close();
 
     this->_asm->loadSource("prog.asm");
-    this->_asm->assemble(0x0000);
-    this->_asm->link();
+    if (!this->_asm->assemble(0x0000)){
+        QMessageBox msg;
+        msg.setWindowTitle("ASM error");
+        msg.setText("Error in assembling this file!");
+        msg.exec();
+        return;
+    }
+    if (!this->_asm->link()){
+        QMessageBox msg;
+        msg.setWindowTitle("ASM error");
+        msg.setText("Error in linking this file!");
+        msg.exec();
+        return;
+    }
 
     outfile.open("prog.hex");
 
@@ -30,6 +43,8 @@ void MainWindow::sl_bt_asm_pressed(){
     outfile.close();
 
     this->_emu->mM->loadProgFromFile("prog.hex", 0x0000);
+    this->_emu->PC(0x0000);
+    this->_emu->HALT(false);
 
     LOGD("Loaded new program");
 }

@@ -12,10 +12,11 @@ Log* hlog;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    hlog = new Log(Log::FUNCALLS, false);
+    hlog = new Log(Log::F, false);
     Z80 z80emu;
     Z80Asm z80asm;
-    z80asm.loadLookup("../Z80Emulator/Z80Asm/z80lookup.txt");
+
+    z80asm.loadLookup("../Z80Asm/z80lookup.txt");
     MainWindow w(&z80emu, &z80asm);
     w.show();
     w.refreshCPU();

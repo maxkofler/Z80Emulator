@@ -25,6 +25,7 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
 
     this->_te_asm = _ui->codeEdit;
     this->_te_asm->setLineWrapMode(QTextEdit::NoWrap);
+    this->_te_asm->setTabStopDistance(40);
 
     this->_bt_asm = _ui->bt_assemble;
     this->_bt_step = _ui->bt_step;
