@@ -75,5 +75,7 @@ void MainWindow::sl_bt_asm_pressed(){
 
     hlog->trace.stopTrace(traceId);
 
+    this->refreshCPU();
+
     LOGD("Loaded new program");
 }

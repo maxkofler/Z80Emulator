@@ -36,8 +36,22 @@ set(PROJECT_SOURCES
             mainwindow/mainwindow_newMenu.cpp
             mainwindow/mainwindow_connectShortcuts.cpp
 
-            mainwindow/registers/registers.cpp
-            mainwindow/registers/rgs_refresh.cpp
+                #Registers
+                mainwindow/registers/registers.cpp
+                mainwindow/registers/rgs_refresh.cpp
+                mainwindow/registers/rgs_connectSlots.cpp
+
+                #slots
+                mainwindow/registers/private_slots/rgs_sl_A_ch.cpp
+                mainwindow/registers/private_slots/rgs_sl_B_ch.cpp
+                mainwindow/registers/private_slots/rgs_sl_C_ch.cpp
+                mainwindow/registers/private_slots/rgs_sl_D_ch.cpp
+                mainwindow/registers/private_slots/rgs_sl_E_ch.cpp
+                mainwindow/registers/private_slots/rgs_sl_H_ch.cpp
+                mainwindow/registers/private_slots/rgs_sl_L_ch.cpp
+
+                mainwindow/registers/private_slots/rgs_sl_PC_ch.cpp
+
             #slots
             mainwindow/private_slots/mw_sl_bt_asm_pressed.cpp
             mainwindow/private_slots/mw_sl_bt_step_pressed.cpp

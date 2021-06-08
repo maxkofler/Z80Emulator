@@ -20,7 +20,21 @@ public:
 
     void                                refresh();
 
+    void                                connectSlots();
+
     friend class                        MainWindow;
+
+private slots:
+    void                                sl_p_A_ch();
+    void                                sl_p_B_ch();
+    void                                sl_p_C_ch();
+    void                                sl_p_D_ch();
+    void                                sl_p_E_ch();
+    void                                sl_p_H_ch();
+    void                                sl_p_L_ch();
+
+    void                                sl_p_PC_ch();
+
 private:
     Z80*                                _emu;
     Z80Asm*                             _asm;
@@ -32,6 +46,7 @@ private:
     QLineEdit*                          _E;
     QLineEdit*                          _H;
     QLineEdit*                          _L;
+
     QLineEdit*                          _PC;
 };
 
