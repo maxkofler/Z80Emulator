@@ -26,21 +26,32 @@
       </item>
       <item row="1" column="0">
        <layout class="QGridLayout" name="gridLayout">
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="regE">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+        <item row="1" column="3">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>C</string>
           </property>
          </widget>
         </item>
         <item row="3" column="0">
-         <widget class="QLineEdit" name="regH">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>H</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5">
+         <widget class="QLineEdit" name="regPC">
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="regL">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -52,7 +63,7 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item row="1" column="1">
          <widget class="QLineEdit" name="regB">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -65,7 +76,7 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="0">
+        <item row="0" column="1">
          <widget class="QLineEdit" name="regA">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -81,7 +92,7 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
+        <item row="1" column="2">
          <widget class="QLineEdit" name="regC">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -94,14 +105,27 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="3">
-         <widget class="QPushButton" name="bt_assemble">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
           <property name="text">
-           <string>Assemble</string>
+           <string>A</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
         <item row="2" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>D</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
          <widget class="QLineEdit" name="regD">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -114,8 +138,18 @@
           </property>
          </widget>
         </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>B</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
         <item row="3" column="1">
-         <widget class="QLineEdit" name="regL">
+         <widget class="QLineEdit" name="regH">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -127,17 +161,51 @@
           </property>
          </widget>
         </item>
-        <item row="2" column="3">
-         <widget class="QPushButton" name="bt_step">
+        <item row="3" column="6">
+         <widget class="QPushButton" name="bt_assemble">
           <property name="text">
-           <string>Step</string>
+           <string>Assemble (F7)</string>
           </property>
          </widget>
         </item>
-        <item row="3" column="2">
-         <widget class="QLineEdit" name="regPC">
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="regE">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>L</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="6">
+         <widget class="QPushButton" name="bt_step">
+          <property name="text">
+           <string>Step (F10)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>E</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>PC</string>
           </property>
          </widget>
         </item>

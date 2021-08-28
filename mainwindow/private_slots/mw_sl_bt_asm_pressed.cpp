@@ -39,7 +39,8 @@ void MainWindow::sl_bt_asm_pressed(){
     size_t traceId = STARTLOGTRACE();
 
     this->_asm->loadSource("prog.asm");
-    if (!this->_asm->assemble(0x0000)){
+    //Assemble program with starting address of 0x1000
+    if (!this->_asm->assemble(0x1000)){
         QMessageBox msg;
         msg.setWindowTitle("ASM error");
         msg.setText("Error in assembling source code:");
@@ -69,8 +70,9 @@ void MainWindow::sl_bt_asm_pressed(){
 
     outfile.close();
 
+    //Load program at 0x0000 and point PC to 0x1000 (start)
     this->_emu->mM->loadProgFromFile("prog.hex", 0x0000);
-    this->_emu->PC(0x0000);
+    this->_emu->PC(0x1000);
     this->_emu->HALT(false);
 
     hlog->trace.stopTrace(traceId);

@@ -12,7 +12,7 @@ Log* hlog;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    hlog = new Log(Log::FUNCALLS, false);
+    hlog = new Log(Log::MEM, false);
     hlog->trace.startTrace();       //Trace 0 is the main trace
     Z80 z80emu;
     Z80Asm z80asm;
