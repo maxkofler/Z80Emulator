@@ -27,14 +27,14 @@
       <item row="1" column="0">
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="3">
-         <widget class="QLabel" name="label_5">
+         <widget class="QLabel" name="lb_C">
           <property name="text">
            <string>C</string>
           </property>
          </widget>
         </item>
         <item row="3" column="0">
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="lb_H">
           <property name="text">
            <string>H</string>
           </property>
@@ -53,7 +53,7 @@
         <item row="3" column="2">
          <widget class="QLineEdit" name="regL">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -66,7 +66,7 @@
         <item row="1" column="1">
          <widget class="QLineEdit" name="regB">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -79,7 +79,7 @@
         <item row="0" column="1">
          <widget class="QLineEdit" name="regA">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -95,7 +95,7 @@
         <item row="1" column="2">
          <widget class="QLineEdit" name="regC">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -106,7 +106,7 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="lb_A">
           <property name="text">
            <string>A</string>
           </property>
@@ -116,7 +116,7 @@
          </widget>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label_3">
+         <widget class="QLabel" name="lb_D">
           <property name="text">
            <string>D</string>
           </property>
@@ -128,7 +128,7 @@
         <item row="2" column="1">
          <widget class="QLineEdit" name="regD">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -139,7 +139,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
+         <widget class="QLabel" name="lb_B">
           <property name="text">
            <string>B</string>
           </property>
@@ -151,7 +151,7 @@
         <item row="3" column="1">
          <widget class="QLineEdit" name="regH">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -171,7 +171,7 @@
         <item row="2" column="2">
          <widget class="QLineEdit" name="regE">
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
@@ -182,7 +182,7 @@
          </widget>
         </item>
         <item row="3" column="3">
-         <widget class="QLabel" name="label_7">
+         <widget class="QLabel" name="lb_L">
           <property name="text">
            <string>L</string>
           </property>
@@ -196,16 +196,30 @@
          </widget>
         </item>
         <item row="2" column="3">
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="lb_E">
           <property name="text">
            <string>E</string>
           </property>
          </widget>
         </item>
         <item row="3" column="4">
-         <widget class="QLabel" name="label_8">
+         <widget class="QLabel" name="lb_PC">
           <property name="text">
            <string>PC</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="5">
+         <widget class="QLineEdit" name="regSP">
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLabel" name="lb_SP">
+          <property name="text">
+           <string>SP</string>
           </property>
          </widget>
         </item>
@@ -224,7 +238,7 @@
      <x>0</x>
      <y>0</y>
      <width>963</width>
-     <height>23</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

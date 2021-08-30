@@ -34,6 +34,7 @@ private slots:
     void                                sl_p_L_ch();
 
     void                                sl_p_PC_ch();
+    void                                sl_p_SP_ch();
 
 private:
     Z80*                                _emu;
@@ -48,6 +49,7 @@ private:
     QLineEdit*                          _L;
 
     QLineEdit*                          _PC;
+    QLineEdit*                          _SP;
 };
 
 #endif // REGISTERS_H

@@ -12,4 +12,5 @@ void Registers::connectSlots(){
     connect(this->_L, &QLineEdit::textChanged, this, &Registers::sl_p_L_ch);
 
     connect(this->_PC, &QLineEdit::textChanged, this, &Registers::sl_p_PC_ch);
+    connect(this->_SP, &QLineEdit::textChanged, this, &Registers::sl_p_SP_ch);
 }

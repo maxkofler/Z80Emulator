@@ -25,6 +25,7 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
     this->_registers->_H = _ui->regH;
     this->_registers->_L = _ui->regL;
     this->_registers->_PC = _ui->regPC;
+    this->_registers->_SP = _ui->regSP;
 
     this->_registers->connectSlots();
 

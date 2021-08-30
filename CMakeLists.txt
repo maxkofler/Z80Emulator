@@ -51,6 +51,7 @@ set(PROJECT_SOURCES
                 mainwindow/registers/private_slots/rgs_sl_L_ch.cpp
 
                 mainwindow/registers/private_slots/rgs_sl_PC_ch.cpp
+                mainwindow/registers/private_slots/rgs_sl_SP_ch.cpp
 
             #slots
             mainwindow/private_slots/mw_sl_bt_asm_pressed.cpp

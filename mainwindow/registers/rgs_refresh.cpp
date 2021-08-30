@@ -14,4 +14,5 @@ void Registers::refresh(){
     this->_L->setText(QString().fromStdString(Log::toPHexString(this->_emu->L())));
 
     this->_PC->setText(QString().fromStdString(Log::toPHexString(this->_emu->PC())));
+    this->_SP->setText(QString().fromStdString(Log::toPHexString(this->_emu->SP())));
 }
