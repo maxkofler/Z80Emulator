@@ -37,7 +37,7 @@ public:
     Ui::MainWindow*                 get(){return this->_ui;}
 
 private slots:
-    void                            sl_bt_asm_pressed();
+    void                            sl_bt_z80asm_pressed();
     void                            sl_bt_step_pressed();
 
     void                            sl_loadSrc(QString);
@@ -47,14 +47,14 @@ private slots:
 private:
     Ui::MainWindow*                 _ui;
     Z80*                            _emu;
-    Z80Asm*                         _asm;
+    Z80Asm*                         _z80asm;
 
     //UI fragments
     Registers*                      _registers;
 
-    QTextEdit*                      _te_asm;
+    QTextEdit*                      _te_z80asm;
 
-    QPushButton*                    _bt_asm;
+    QPushButton*                    _bt_z80asm;
     QPushButton*                    _bt_step;
 
     //Menu

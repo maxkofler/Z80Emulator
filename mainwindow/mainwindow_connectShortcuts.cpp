@@ -8,7 +8,7 @@ void MainWindow::connectShortcuts(){
 
     //ASSEMBLE                      F7
     connect(new QShortcut(QKeySequence(Qt::Key_F7), this), &QShortcut::activated,
-            this, &MainWindow::sl_bt_asm_pressed);
+            this, &MainWindow::sl_bt_z80asm_pressed);
 
     //STEP                          F10
     connect(new QShortcut(QKeySequence(Qt::Key_F10), this), &QShortcut::activated,

@@ -28,14 +28,14 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
 
     this->_registers->connectSlots();
 
-    this->_te_asm = _ui->codeEdit;
-    this->_te_asm->setLineWrapMode(QTextEdit::NoWrap);
-    this->_te_asm->setTabStopDistance(40);
+    this->_te_z80asm = _ui->codeEdit;
+    this->_te_z80asm->setLineWrapMode(QTextEdit::NoWrap);
+    this->_te_z80asm->setTabStopDistance(40);
 
-    this->_bt_asm = _ui->bt_assemble;
+    this->_bt_z80asm = _ui->bt_assemble;
     this->_bt_step = _ui->bt_step;
 
-    connect(this->_bt_asm, &QPushButton::clicked, this, &MainWindow::sl_bt_asm_pressed);
+    connect(this->_bt_z80asm, &QPushButton::clicked, this, &MainWindow::sl_bt_z80asm_pressed);
     connect(this->_bt_step, &QPushButton::clicked, this, &MainWindow::sl_bt_step_pressed);
 
     connect(this->_menu, &UIMenu::on_openSource, this, &MainWindow::sl_loadSrc);
@@ -43,7 +43,7 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
     connect(this->_menu, &UIMenu::on_openHex, this, &MainWindow::sl_loadHex);
 
     this->_emu = z80emu;
-    this->_asm = z80asm;
+    this->_z80asm = z80asm;
 
 
     this->connectShortcuts();

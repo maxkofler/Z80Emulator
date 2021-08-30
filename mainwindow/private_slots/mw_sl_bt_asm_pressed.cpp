@@ -5,10 +5,10 @@
 #include <fstream>
 #include <QMessageBox>
 
-void MainWindow::sl_bt_asm_pressed(){
+void MainWindow::sl_bt_z80asm_pressed(){
     FUN();
 
-    std::string teContent = this->_te_asm->toPlainText().toStdString();
+    std::string teContent = this->_te_z80asm->toPlainText().toStdString();
 
     {
         //A string containing no spaces, newlines, tabs
@@ -31,16 +31,16 @@ void MainWindow::sl_bt_asm_pressed(){
     outfile.open("prog.asm");
 
     if (outfile.is_open()){
-        outfile << this->_te_asm->toPlainText().toStdString() << std::endl;
+        outfile << this->_te_z80asm->toPlainText().toStdString() << std::endl;
     }
 
     outfile.close();
 
     size_t traceId = STARTLOGTRACE();
 
-    this->_asm->loadSource("prog.asm");
+    this->_z80asm->loadSource("prog.asm");
     //Assemble program with starting address of 0x1000
-    if (!this->_asm->assemble(0x1000)){
+    if (!this->_z80asm->assemble(0x1000)){
         QMessageBox msg;
         msg.setWindowTitle("ASM error");
         msg.setText("Error in assembling source code:");
@@ -49,7 +49,7 @@ void MainWindow::sl_bt_asm_pressed(){
         msg.exec();
         return;
     }
-    if (!this->_asm->link()){
+    if (!this->_z80asm->link()){
         QMessageBox msg;
         msg.setWindowTitle("ASM error");
         msg.setText("Error in linking source code:");
@@ -62,7 +62,7 @@ void MainWindow::sl_bt_asm_pressed(){
     outfile.open("prog.hex");
 
     {
-        auto prog = this->_asm->getProg();
+        auto prog = this->_z80asm->getProg();
         for (auto i : prog){
             outfile << i;
         }

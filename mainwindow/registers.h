@@ -16,7 +16,7 @@ class Registers : public QObject
 {
     Q_OBJECT
 public:
-    Registers(Z80* _emu, Z80Asm* _asm);
+    Registers(Z80* _emu, Z80Asm* _z80asm);
 
     void                                refresh();
 
@@ -37,7 +37,7 @@ private slots:
 
 private:
     Z80*                                _emu;
-    Z80Asm*                             _asm;
+    Z80Asm*                             _z80asm;
 
     QLineEdit*                          _A;
     QLineEdit*                          _B;

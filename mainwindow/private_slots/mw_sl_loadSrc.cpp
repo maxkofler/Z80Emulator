@@ -16,5 +16,5 @@ void MainWindow::sl_loadSrc(QString path){
         text += QString().fromStdString(buf + "\n");
     }
 
-    this->_te_asm->setText(text);
+    this->_te_z80asm->setText(text);
 }
