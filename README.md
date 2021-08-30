@@ -12,7 +12,7 @@ qt5
 ```
 git clone https://github.com/maxkofler/Z80Emulator.com
 cd Z80Emulator
-sh ./setup.sh
-cd build
+mkdir build && cd build
+cmake ..
 make -j <number of cores>
 ```
