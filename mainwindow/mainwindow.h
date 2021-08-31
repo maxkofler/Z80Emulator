@@ -6,6 +6,8 @@ class MainWindow;
 #include <QMainWindow>
 #include <QLineEdit>
 #include <QTextEdit>
+#include <QTableView>
+#include <QStandardItemModel>
 #include <QPushButton>
 
 #include "z80emu.h"
@@ -53,6 +55,9 @@ private:
     Registers*                      _registers;
 
     QTextEdit*                      _te_z80asm;
+    QTableView*                     _tv_z80mem;
+    QStandardItemModel              _md_mem;
+    QStandardItem**                 _it_mem;
 
     QPushButton*                    _bt_z80asm;
     QPushButton*                    _bt_step;

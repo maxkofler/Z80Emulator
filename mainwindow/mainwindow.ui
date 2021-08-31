@@ -17,13 +17,6 @@
    <layout class="QGridLayout" name="gridLayout_4">
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout_3">
-      <item row="3" column="0">
-       <widget class="QTextEdit" name="codeEdit">
-        <property name="styleSheet">
-         <string notr="true">font: 12pt;</string>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="0">
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="3">
@@ -226,7 +219,21 @@
        </layout>
       </item>
       <item row="2" column="0">
-       <layout class="QGridLayout" name="gridLayout_2"/>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <item>
+           <widget class="QTextEdit" name="codeEdit"/>
+          </item>
+          <item>
+           <widget class="QTableView" name="memView"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>

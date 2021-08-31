@@ -33,6 +33,31 @@ MainWindow::MainWindow(Z80* z80emu, Z80Asm* z80asm, QWidget *parent)
     this->_te_z80asm->setLineWrapMode(QTextEdit::NoWrap);
     this->_te_z80asm->setTabStopDistance(40);
 
+    {//Create memory view
+        this->_tv_z80mem = _ui->memView;
+        QStandardItemModel _md_mem(UINT16_MAX, 2, this);
+        this->_it_mem = new QStandardItem*[UINT16_MAX];
+        QStandardItem *it_addr;
+        QStandardItem *it_cont;
+
+        //Switch level to Debug to supress all the MEMORY logs when loading in memory
+        //int levelCache = hlog->getLevel();
+        //hlog->setLevel(levelCache-1);
+
+        //Load in all memory addresses
+        for (uint16_t i = 0; i < UINT16_MAX; i++){
+            it_addr = new QStandardItem(QString().fromStdString(Log::toPHexString(i)));
+            it_cont = new QStandardItem(QString().fromStdString(Log::toPHexString(z80emu->mM->get(i))));
+            this->_md_mem.setItem(i, 0, it_addr);
+            this->_md_mem.setItem(i, 1, it_cont);
+        }
+
+        //Reset loglevel
+        //hlog->setLevel(levelCache);
+    }
+
+    this->_tv_z80mem->setModel(&this->_md_mem);
+
     this->_bt_z80asm = _ui->bt_assemble;
     this->_bt_step = _ui->bt_step;
 
